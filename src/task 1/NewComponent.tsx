@@ -1,5 +1,6 @@
 import React from 'react';
 import {FilterType, MoneyType} from "./FilterBank";
+import {UniversalButton} from "./UniversalButton";
 
 type PropsType = {
     onClickHandler: (filterValue: FilterType) => void
@@ -22,9 +23,9 @@ function NewComponent(props: PropsType) {
                     )
                 })}
             </ul>
-            <button onClick={() => props.onClickHandler("all")}>All</button>
-            <button onClick={() => props.onClickHandler("ruble")}>Rubles</button>
-            <button onClick={() => props.onClickHandler("dollar")}>Dollars</button>
+            <UniversalButton name={"All"} callback={() => props.onClickHandler("all")}/>
+            <UniversalButton name={"Rubles"} callback={() => props.onClickHandler("ruble")}/>
+            <UniversalButton name={"Dollars"} callback={() => props.onClickHandler("dollar")}/>
         </>
     );
 }

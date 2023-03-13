@@ -33,19 +33,14 @@ function MainFirst() {
         ]
     )
 
-    // const buttonFooHandler = (subscriber: string, age: number) => {
-    //     alert(subscriber + age)
-    // }
-    // const buttonFooHandler2 = (subscriber: string) => {
-    //     alert(subscriber)
-    // }
-    //
-    // const buttonFooHandler3 = () => {
-    //     alert("I am a stupid btn")
-    // }
-
     const onClickHandler = (subscriber?: string | number, age?: string | number) => {
-        console.log(subscriber, age)
+        if (age === undefined) {
+            age = 'private age'
+        }
+        if (subscriber === undefined) {
+            subscriber = 'private name'
+        }
+        alert(`Name: ${subscriber}  age: ${age}`)
     }
 
     return (
@@ -55,8 +50,8 @@ function MainFirst() {
             <h4>Buttons</h4>
             <ButtonComponent/>
             <h4>Universal buttons</h4>
-            <UniversalButton name={"Ann"} callback={() => onClickHandler("I am Ann!", 22)}/>
-            <UniversalButton name={"Alex"} callback={() => onClickHandler("I am Alex!")}/>
+            <UniversalButton name={"Ann"} callback={() => onClickHandler("Ann", 22)}/>
+            <UniversalButton name={"Alex"} callback={() => onClickHandler("Alex")}/>
             <UniversalButton name={"Stupid"} callback={onClickHandler}/>
             <Counter/>
             <h4>Filter Bank</h4>
