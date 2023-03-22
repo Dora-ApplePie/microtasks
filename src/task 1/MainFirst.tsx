@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {MapComponent, studentsType} from "./MapComponent";
-import {ButtonComponent} from "./ButtonComponent";
-import {UniversalButton} from "./UniversalButton";
-import Counter from "./Counter";
-import FilterBank from "./FilterBank";
+import {MapComponent, studentsType} from "./components/MapComponent";
+import {ButtonComponent} from "./components/ButtonComponent";
+import {UniversalButton} from "./components/UniversalButton";
+import Counter from "./components/Counter";
+import FilterBank from "./components/FilterBank";
 
 
 function MainFirst() {
