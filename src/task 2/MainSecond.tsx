@@ -11,8 +11,7 @@ function MainSecond() {
     ])
 
     function setServerInfoHandler(newInfo: string) {
-        let newState = [...serverInfo, {status: newInfo}]
-        setServerInfo(newState)
+        setServerInfo([{status: newInfo},...serverInfo]);
     }
 
     return (

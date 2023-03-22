@@ -20,7 +20,7 @@ export const FullInput = (props: propsType) => {
     return (
         <div>
             <input value={title} onChange={onChangeInputHandler}/>
-            <UniversalButton callback={onClickSetInfoHandler} name={"x"}/>
+            <UniversalButton callback={onClickSetInfoHandler} name={"Add info"}/>
         </div>
     )
 }
